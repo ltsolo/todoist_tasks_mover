@@ -23,4 +23,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
+        env:
+          TODOIST_API_KEY: ${{ secrets.TODOIST_API_KEY }}
         run: python transfer_daily_tasks.py
